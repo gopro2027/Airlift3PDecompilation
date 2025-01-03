@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="58"
+    android:versionName="1.3.4"
+    android:compileSdkVersion="30"
+    android:compileSdkVersionCodename="11"
+    platformBuildVersionCode="30"
+    platformBuildVersionName="11">
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="30"/>
+    <supports-screens
+        android:anyDensity="true"
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:resizeable="true"
+        android:xlargeScreens="false"/>
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true"/>
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA2"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="http"/>
+        </intent>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.GET_CONTENT"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="https"/>
+        </intent>
+    </queries>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
+    <application
+        android:theme="@style/AppTheme"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <activity
+            android:theme="@style/FullscreenStyle"
+            android:label="@string/app_name"
+            android:name="com.airliftcompany.alp3.MainActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/FullscreenActionBarStyle"
+            android:name="com.airliftcompany.alp3.firmware.UpdateAvailableActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/FullscreenActionBarStyle"
+            android:name="com.airliftcompany.alp3.firmware.FirmwareUpdateActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/FullscreenActionBarStyle"
+            android:name="com.airliftcompany.alp3.DeviceScanActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/FullscreenActionBarStyle"
+            android:name="com.airliftcompany.alp3.DevicePairActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/FullscreenActionBarStyle"
+            android:name="com.airliftcompany.alp3.settings.SettingsHome"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/FullscreenActionBarStyle"
+            android:name="com.airliftcompany.alp3.settings.SettingsDisplay"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.airliftcompany.alp3.settings.SettingsHome"/>
+        </activity>
+        <activity
+            android:theme="@style/FullscreenActionBarStyle"
+            android:name="com.airliftcompany.alp3.settings.SettingsOperation"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.airliftcompany.alp3.settings.SettingsHome"/>
+        </activity>
+        <activity
+            android:theme="@style/FullscreenActionBarStyle"
+            android:name="com.airliftcompany.alp3.settings.SettingsSetup"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.airliftcompany.alp3.settings.SettingsHome"/>
+        </activity>
+        <activity
+            android:theme="@style/FullscreenActionBarStyle"
+            android:name="com.airliftcompany.alp3.settings.SettingsCompressor"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.airliftcompany.alp3.settings.SettingsSetup"/>
+        </activity>
+        <activity
+            android:theme="@style/FullscreenActionBarStyle"
+            android:name="com.airliftcompany.alp3.calibration.CalibrationAccelerometer"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.airliftcompany.alp3.settings.SettingsHome"/>
+        </activity>
+        <activity
+            android:theme="@style/FullscreenActionBarStyle"
+            android:name="com.airliftcompany.alp3.calibration.CalibrationAutoSensorLimits"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.airliftcompany.alp3.settings.SettingsHome"/>
+        </activity>
+        <activity
+            android:theme="@style/FullscreenActionBarStyle"
+            android:name="com.airliftcompany.alp3.calibration.CalibrationHeight"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.airliftcompany.alp3.settings.SettingsHome"/>
+        </activity>
+        <activity
+            android:theme="@style/FullscreenActionBarStyle"
+            android:name="com.airliftcompany.alp3.calibration.CalibrationManualSensorLimits"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.airliftcompany.alp3.settings.SettingsHome"/>
+        </activity>
+        <activity
+            android:theme="@style/FullscreenActionBarStyle"
+            android:name="com.airliftcompany.alp3.calibration.CalibrationManualPressure"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.airliftcompany.alp3.settings.SettingsHome"/>
+        </activity>
+        <activity
+            android:theme="@style/FullscreenActionBarStyle"
+            android:name="com.airliftcompany.alp3.calibration.CalibrationPressure"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.airliftcompany.alp3.settings.SettingsHome"/>
+        </activity>
+        <activity
+            android:theme="@style/FullscreenActionBarStyle"
+            android:name="com.airliftcompany.alp3.calibration.CalibrationQuestions"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.airliftcompany.alp3.settings.SettingsHome"/>
+        </activity>
+        <activity
+            android:theme="@style/FullscreenActionBarStyle"
+            android:name="com.airliftcompany.alp3.settings.SettingsAbout"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.airliftcompany.alp3.settings.SettingsHome"/>
+        </activity>
+        <activity
+            android:theme="@style/FullscreenActionBarStyle"
+            android:name="com.airliftcompany.alp3.settings.SettingsSensorTool"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.airliftcompany.alp3.settings.SettingsSetup"/>
+        </activity>
+        <activity
+            android:name="com.airliftcompany.alp3.PairDevice"
+            android:parentActivityName="com.airliftcompany.alp3.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.airliftcompany.alp3.MainActivity"/>
+        </activity>
+        <activity
+            android:theme="@style/FullscreenActionBarStyle"
+            android:name="com.airliftcompany.alp3.dealer.DealerLogin"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.airliftcompany.alp3.settings.SettingsHome"/>
+        </activity>
+        <activity
+            android:theme="@style/FullscreenActionBarStyle"
+            android:name="com.airliftcompany.alp3.dealer.ChangePassword"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.airliftcompany.alp3.dealer.DealerLogin"/>
+        </activity>
+        <activity
+            android:theme="@style/FullscreenActionBarStyle"
+            android:name="com.airliftcompany.alp3.dealer.ResetPassword"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.airliftcompany.alp3.dealer.DealerLogin"/>
+        </activity>
+        <activity
+            android:theme="@style/FullscreenActionBarStyle"
+            android:name="com.airliftcompany.alp3.dealer.FindDevice"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.airliftcompany.alp3.dealer.DealerLogin"/>
+        </activity>
+        <activity
+            android:theme="@style/FullscreenActionBarStyle"
+            android:name="com.airliftcompany.alp3.dealer.EditDevice"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.airliftcompany.alp3.dealer.FindDevice"/>
+        </activity>
+        <activity
+            android:name="com.airliftcompany.alp3.Registration"
+            android:parentActivityName="com.airliftcompany.alp3.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.airliftcompany.alp3.MainActivity"/>
+        </activity>
+        <service
+            android:name="com.airliftcompany.alp3.comm.CommService"
+            android:enabled="true"/>
+        <service
+            android:name="com.airliftcompany.alp3.comm.BleService"
+            android:enabled="true"/>
+        <service
+            android:name="com.amazonaws.mobileconnectors.p004s3.transferutility.TransferService"
+            android:enabled="true"/>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:authorities="com.airliftcompany.alp3.fileprovider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+        <activity
+            android:label="@string/title_activity_sign_in"
+            android:name="com.amazonaws.mobile.auth.p003ui.SignInActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:label="@string/title_activity_force_change_password"
+            android:name="com.amazonaws.mobile.auth.userpools.ForceChangePasswordActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:label="@string/title_activity_forgot_password"
+            android:name="com.amazonaws.mobile.auth.userpools.ForgotPasswordActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:label="@string/title_activity_sign_up"
+            android:name="com.amazonaws.mobile.auth.userpools.SignUpActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:label="@string/title_activity_mfa"
+            android:name="com.amazonaws.mobile.auth.userpools.MFAActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:label="@string/title_activity_sign_up_confirm"
+            android:name="com.amazonaws.mobile.auth.userpools.SignUpConfirmActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="screenSize|orientation|keyboardHidden|keyboard"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.amazonaws.mobileconnectors.cognitoauth.activities.CustomTabsManagerActivity"
+            android:exported="false"
+            android:launchMode="singleTask"/>
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false"/>
+        <activity
+            android:theme="@android:style/Theme.Holo.Light"
+            android:name="com.testfairy.activities.ProvideFeedbackActivity"
+            android:configChanges="screenSize|orientation"/>
+        <activity
+            android:theme="@android:style/Theme.NoDisplay"
+            android:name="com.microsoft.appcenter.distribute.DeepLinkActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="appcenter"
+                    android:host="updates"
+                    android:path="/"/>
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.microsoft.appcenter.distribute.DownloadManagerReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
+                <action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED"/>
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

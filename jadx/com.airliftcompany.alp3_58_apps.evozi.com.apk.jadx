@@ -1,0 +1,124 @@
+{
+  "projectVersion": 1,
+  "files": [
+    "com.airliftcompany.alp3_58_apps.evozi.com.apk"
+  ],
+  "treeExpansions": [
+    [
+      "Source code",
+      "com.airliftcompany.alp3_58_apps.evozi.com.apk"
+    ],
+    [
+      "com",
+      "Source code",
+      "com.airliftcompany.alp3_58_apps.evozi.com.apk"
+    ],
+    [
+      "airliftcompany.alp3",
+      "com",
+      "Source code",
+      "com.airliftcompany.alp3_58_apps.evozi.com.apk"
+    ],
+    [
+      "comm",
+      "airliftcompany.alp3",
+      "com",
+      "Source code",
+      "com.airliftcompany.alp3_58_apps.evozi.com.apk"
+    ]
+  ],
+  "codeData": {
+    "comments": [],
+    "renames": []
+  },
+  "openTabs": [
+    {
+      "type": "class",
+      "tabPath": "com.airliftcompany.alp3.comm.CommService",
+      "subPath": "java",
+      "caret": 871,
+      "view": {
+        "x": 0,
+        "y": 6935
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.airliftcompany.alp3.comm.CommServiceListener",
+      "subPath": "java",
+      "caret": 0,
+      "view": {
+        "x": 0,
+        "y": 0
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.airliftcompany.alp3.comm.ALP3Protocol",
+      "subPath": "java",
+      "caret": 90,
+      "view": {
+        "x": 0,
+        "y": 2829
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.airliftcompany.alp3.comm.BleService",
+      "subPath": "java",
+      "caret": 1300,
+      "view": {
+        "x": 0,
+        "y": 5661
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.airliftcompany.alp3.comm.ALP3Device",
+      "subPath": "java",
+      "caret": 10076,
+      "view": {
+        "x": 0,
+        "y": 4244
+      },
+      "active": true,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
+    },
+    {
+      "type": "class",
+      "tabPath": "com.airliftcompany.alp3.comm.RXController",
+      "subPath": "java",
+      "caret": 9447,
+      "view": {
+        "x": 0,
+        "y": 2935
+      },
+      "active": false,
+      "pinned": false,
+      "bookmarked": false,
+      "hidden": false
+    }
+  ],
+  "cacheDir": "C:\\Users\\user\\AppData\\Local\\skylot\\jadx\\cache\\projects\\com.airliftcompany.alp3_58_apps.evozi.com-a1cae93d3913978044ee5290f88e10e4",
+  "enableLiveReload": false,
+  "searchHistory": [],
+  "pluginOptions": {}
+}
